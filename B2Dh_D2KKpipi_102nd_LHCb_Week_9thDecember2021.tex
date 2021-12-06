@@ -176,18 +176,18 @@
     \setlength\itemsep{1.2em}
     \item{First proposed by J. Rademacker and G. Wilkinson}
     \begin{itemize}
-      \item{\href{https://arxiv.org/abs/hep-ph/0611272}{arXiv:hep-ph/0611272}}
+      \item{\href{https://arxiv.org/abs/hep-ph/0611272}{Physics Letters B \textbf{647} (2007) 400}}
       \item{Amplitude model by FOCUS}
       \item{Expected $\gamma$ precision from amplitude fit with $1000$ candidates: $14^\circ$}
     \end{itemize}
     \item{CLEO amplitude analysis}
     \begin{itemize}
-      \item{\href{https://arxiv.org/abs/1201.5716}{arXiv:1201.5716}}
+      \item{\href{https://arxiv.org/abs/1201.5716}{Phys. Rev. D \textbf{85} (2012) 122002}}
       \item{Expected $\gamma$ precision from amplitude fit with $2000$ candidates: $11^\circ$}
     \end{itemize}
     \item{State of the art amplitude analysis by LHCb:}
     \begin{itemize}
-      \item{\href{https://cds.cern.ch/record/2648586?ln=en}{LHCb-PAPER-2018-041}}
+      \item{\href{https://arxiv.org/abs/1811.08304}{JHEP \textbf{02} (2019) 126}}
       \item{Use to develop efficient binning scheme}
     \end{itemize}
   \end{itemize}
@@ -205,11 +205,13 @@
     \setlength\itemsep{0.5em}
     \item{Final measurement will be \underline{model-independent}}
     \begin{itemize}
-      \item{Poor binning reduces statistical sensitivity $\to$ No bias!}
+      \item{Non-optimal binning reduces statistical sensitivity}
+      \item{But no bias is induced in final result}
     \end{itemize}
-    \item{Need strong phases of $D$ decay $\to$ Measure at BESIII}
-    \item{LHCb-PAPER-2020-019: $B^\pm\to Dh^\pm$, $D\to K_S^0 h^+h^-$}
+    \item{Need strong phases of $D$ decay $\to$ Will be measured at BESIII}
+    \item{Analogous approach to $B^\pm\to Dh^\pm$, $D\to K_S^0 h^+h^-$}
     \begin{itemize}
+      \item{\href{https://arxiv.org/abs/2010.08483}{JHEP \textbf{02} (2021) 0169}}
       \item{Single most precise measurement: $\gamma = (68.7^{+5.2}_{-5.1})^\circ$}
     \end{itemize}
   \end{itemize}
@@ -307,7 +309,11 @@
 \begin{frame}{$\gamma$ precision benchmark}
   \begin{itemize}
     \item{Generate $2000$ $B^\pm\to DK^\pm$ candidates using LHCb model in AmpGen}
-    \item{Fit back with same model using AmpGen}
+    \vspace{-0.3cm}
+    \begin{itemize}
+      \item{Input values: $\gamma = \SI{75}{\degree}$, $\delta_B = \SI{130}{\degree}$, $r_B = 0.1$}
+    \end{itemize}
+    \item{Perform unbinned fit to the same amplitude model using AmpGen}
   \end{itemize}
   \begin{figure}
     \centering
@@ -350,9 +356,9 @@
 \end{frame}
 
 \section{Fit to data}
-\begin{frame}{Global fit}
+\begin{frame}{Global mass fit}
   \begin{center}
-    {\huge Global fit}
+    {\huge Global mass fit}
   \end{center}
 \end{frame}
 
@@ -375,11 +381,12 @@
   \end{equation*}
 \end{frame}
 
-\begin{frame}{Global fit}
+\begin{frame}{Global mass fit}
   \begin{figure}
     \centering
     \includegraphics[width = 1.0\textwidth]{Plots/d2kkpipi_fiveL_allDP.pdf}
-    \caption{$B^\pm\to DK^\pm$ channel (left) and $B^\pm\to D\pi^\pm$ channel (right)}
+    \captionsetup{justification=centering}
+    \caption{Fit of $B^\pm\to DK^\pm$ channel (left) and $B^\pm\to D\pi^\pm$ channel (right) using full Run 1 and 2 data}
   \end{figure}
   \vspace{-0.5cm}
   \begin{itemize}
@@ -398,12 +405,12 @@
   \begin{itemize}
     \setlength\itemsep{1.2em}
     \item{Use $2\times 8$ bins}
-    \item{$c_i$ and $s_i$ not available yet $\implies$}
+    \item{$c_i$ and $s_i$ not available from BESIII yet $\implies$}
     \begin{itemize}
       \item{Calculate using MC integration of LHCb amplitude model for now}
     \end{itemize}
     \item{Fit for CP observables}
-    \item{PDF shape parameters fixed from global fit}
+    \item{PDF shape parameters fixed from global mass fit}
     \item{Yield of signal, low mass partially reconstructed background and combinatorial background floated}
     \item{Fractional yields $F_i$ floated}
   \end{itemize}
@@ -416,118 +423,131 @@
   \end{equation*}
 \end{frame}
 
-\begin{frame}{CP observables result: $x_-^{DK}$}
+\begin{frame}{CP observables result: $x_-^{DK}$ and $y_-^{DK}$}
   \begin{figure}
     \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_xm_dk_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
+    \begin{subfigure}{0.38\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/A_xm_dk_pull.png}
     \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_xm_dk_error_WithDataUncertainty.png}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    Red line: Uncertainty in fit to data
-  \end{center}
-\end{frame}
-
-\begin{frame}{CP observables result: $y_-^{DK}$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_ym_dk_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
+    \begin{subfigure}{0.38\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/A_ym_dk_pull.png}
+    \end{subfigure}
+    \begin{subfigure}{0.38\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/A_xm_dk_error_WithDataUncertainty.png}
+      \caption{$x_- = r_B\cos(\delta_B - \gamma)$}
     \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
+    \begin{subfigure}{0.38\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/A_ym_dk_error_WithDataUncertainty.png}
+      \caption{$y_- = r_B\sin(\delta_B - \gamma)$}
     \end{subfigure}
   \end{figure}
   \begin{center}
-    Red line: Uncertainty in fit to data
+    Pulls and uncertainties from toy studies, uncertainty from data fit in blue
   \end{center}
 \end{frame}
 
-\begin{frame}{CP observables result: $x_+^{DK}$}
+\begin{frame}{CP observables result: $x_+^{DK}$ and $y_+^{DK}$}
   \begin{figure}
     \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_xp_dk_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
+    \begin{subfigure}{0.38\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/A_xp_dk_pull.png}
     \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_xp_dk_error_WithDataUncertainty.png}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    Red line: Uncertainty in fit to data
-  \end{center}
-\end{frame}
-
-\begin{frame}{CP observables result: $y_+^{DK}$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_yp_dk_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
+    \begin{subfigure}{0.38\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/A_yp_dk_pull.png}
+    \end{subfigure}
+    \begin{subfigure}{0.38\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/A_xp_dk_error_WithDataUncertainty.png}
+      \caption{$x_+ = r_B\cos(\delta_B + \gamma)$}
     \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
+    \begin{subfigure}{0.38\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/A_yp_dk_error_WithDataUncertainty.png}
+      \caption{$y_+ = r_B\sin(\delta_B + \gamma)$}
     \end{subfigure}
   \end{figure}
   \begin{center}
-    Red line: Uncertainty in fit to data
+    Pulls and uncertainties from toy studies, uncertainty from data fit in blue
   \end{center}
 \end{frame}
 
-\begin{frame}{CP observables result: $x_\xi^{D\pi}$}
+\begin{frame}{CP observables result: $x_\xi^{D\pi}$ and $y_\xi^{D\pi}$}
   \begin{figure}
     \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_Re_xi_dpi_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
+    \begin{subfigure}{0.38\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/A_Re_xi_dpi_pull.png}
     \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_Re_xi_dpi_error_WithDataUncertainty.png}
-    \end{subfigure}
-  \end{figure}
-  \begin{center}
-    Red line: Uncertainty in fit to data
-  \end{center}
-\end{frame}
-
-\begin{frame}{CP observables result: $y_\xi^{D\pi}$}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.42\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/A_Im_xi_dpi_value.png}
-    \end{subfigure}
-    \begin{subfigure}{0.42\textwidth}
+    \begin{subfigure}{0.38\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/A_Im_xi_dpi_pull.png}
+    \end{subfigure}
+    \begin{subfigure}{0.38\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/A_Re_xi_dpi_error_WithDataUncertainty.png}
+      \caption{$x_\xi = \Re(\xi)$}
     \end{subfigure}%
-    \begin{subfigure}{0.42\textwidth}
+    \begin{subfigure}{0.38\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/A_Im_xi_dpi_error_WithDataUncertainty.png}
+      \caption{$x_\xi = \Im(\xi)$}
     \end{subfigure}
   \end{figure}
   \begin{center}
-    Red line: Uncertainty in fit to data
+    Pulls and uncertainties from toy studies, uncertainty from data fit in blue
   \end{center}
 \end{frame}
 
-\section{Summary of $KK\pi\pi$ analysis}
-\begin{frame}{Summary of $KK\pi\pi$ analysis}
+\section{Systematic uncertainties}
+\begin{frame}{Systematic uncertainties}
   \begin{center}
-    {\huge Summary of $KK\pi\pi$ analysis}
+    {\huge Systematic uncertainties}
+  \end{center}
+\end{frame}
+
+\begin{frame}{$c_i$ and $s_i$ systematic uncertainty}
+  \begin{itemize}
+    \setlength\itemsep{1.5em}
+    \item{$c_i$ and $s_i$ uncertainty will come from BESIII analysis}
+    \begin{itemize}
+      \item{Mostly statistical in origin}
+    \end{itemize}
+    \item{Largest systematic uncertainty}
+    \item{Use estimated uncertainties corresponding to $\SI{20}{\per\femto\barn}$ at $\psi(3770)$}
+    \item{Smear $c_i$ and $s_i$ and do many fits to data}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Summary of all systematic uncertainties}
+  \vspace{-0.3cm}
+  \begin{center}
+    Uncertainties of CP observables in units of $10^{-2}$
+  \end{center}
+  \vspace{0.02cm}
+  \begin{tabular}{lcccccc} 
+        \hline
+        Source & $x_-^{DK}$ & $y_-^{DK}$ & $x_+^{DK}$ & $y_+^{DK}$ & $x_\xi^{D\pi}$ & $y_\xi^{D\pi}$ \\
+        \hline
+        Statistical                              & 2.91  & 3.41  & 2.51  & 3.04  & 4.04  & 4.89  \\
+        \hline
+        $c_i$, $s_i$                             & 0.66  & 1.55  & 0.32  & 1.31  & 1.73  & 1.03  \\
+        \hline
+        $B^\pm\to D\mu\nu$ background            & 0.04  & 0.03  & 0.02  & 0.15  & 0.30  & 0.10 \\
+        $D\to K(X)l\nu_l$ background             & 0.15  & 0.05  & 0.11  & 0.03  & 0.35  & 0.25 \\
+        $D\to K\pi\pi\pi$ background             & 0.17  & 0.03  & 0.04  & 0.01  & 0.46  & 0.18 \\
+        $\Lambda_b$ background                   & 0.09  & 0.11  & 0.00  & 0.18  & 0.16  & 0.21 \\
+        Bin dependent mass shape                 & 0.21  & 0.05  & 0.17  & 0.01  & 0.37  & 0.11 \\
+        Fit bias                                 & 0.19  & 0.03  & 0.16  & 0.04  & 0.30  & 0.16 \\
+        Fixed yield fractions                    & 0.02  & 0.03  & 0.02  & 0.02  & 0.01  & 0.01 \\
+        Low mass physics effects                 & 0.05  & 0.09  & 0.05  & 0.18  & 0.41  & 0.48 \\
+        Mass shape                               & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01 \\
+        PID Efficiency                           & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01 \\
+        \hline
+        Total LHCb systematic                    & 0.39  & 0.17  & 0.27  & 0.30  & 0.92  & 0.65  \\
+        \hline
+        Total systematic                         & 0.77  & 1.55  & 0.41  & 1.34  & 2.01  & 1.23  \\
+        \hline
+  \end{tabular}
+\end{frame}
+
+\section{Summary and conclusion of $KK\pi\pi$ analysis}
+\begin{frame}{Summary and conclusion of $KK\pi\pi$ analysis}
+  \begin{center}
+    {\huge Summary and conclusion of \\$KK\pi\pi$ analysis}
   \end{center}
 \end{frame}
 
@@ -536,12 +556,12 @@
     \item{Measured CP observables:}
   \end{itemize}
   \begin{align*}
-    x_-^{DK} =& (x.x \pm 2.4 \pm 0.4 \pm 0.7)\times 10^{-2}, \\
-    y_-^{DK} =& (x.x \pm 2.9 \pm 0.2 \pm 1.6)\times 10^{-2}, \\
-    x_+^{DK} =& (x.x \pm 2.2 \pm 0.3 \pm 0.3)\times 10^{-2}, \\
-    y_+^{DK} =& (x.x \pm 2.9 \pm 0.3 \pm 1.3)\times 10^{-2}, \\
-    x_\xi^{D\pi} =& (x.x \pm 3.5 \pm 0.9 \pm 1.7)\times 10^{-2}, \\
-    y_\xi^{D\pi} =& (x.x \pm 4.3 \pm 0.6 \pm 1.0)\times 10^{-2},
+    x_-^{DK} =& (x.x \pm 2.9 \pm 0.4 \pm 0.7)\times 10^{-2}, \\
+    y_-^{DK} =& (x.x \pm 3.4 \pm 0.2 \pm 1.6)\times 10^{-2}, \\
+    x_+^{DK} =& (x.x \pm 2.5 \pm 0.3 \pm 0.3)\times 10^{-2}, \\
+    y_+^{DK} =& (x.x \pm 3.0 \pm 0.3 \pm 1.3)\times 10^{-2}, \\
+    x_\xi^{D\pi} =& (x.x \pm 4.0 \pm 0.9 \pm 1.7)\times 10^{-2}, \\
+    y_\xi^{D\pi} =& (x.x \pm 4.9 \pm 0.7 \pm 1.0)\times 10^{-2},
   \end{align*}
   \vspace{-0.5cm}
   \begin{itemize}
@@ -551,58 +571,15 @@
   \end{itemize}
 \end{frame}
 
-\section{Quasi-GLW observables with $B^\pm\to Dh^\pm$, $D\to\pi^+\pi^-\pi^+\pi^-$}
-\begin{frame}{Quasi-GLW observables with $B^\pm\to Dh^\pm$, $D\to\pi^+\pi^-\pi^+\pi^-$}
-  \begin{center}
-    {\huge Bonus measurement: \\ \vspace{0.5cm} Quasi-GLW observables with \\ $B^\pm\to Dh^\pm$, $D\to\pi^+\pi^-\pi^+\pi^-$}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Bonus measurement}
-  \begin{itemize}
-    \setlength\itemsep{1em}
-    \item{The mode $B^\pm\to Dh^\pm$, $D\to\pi^+\pi^-\pi^+\pi^-$ very similar}
-    \item{Run this through \underline{same} selection (including BDT)}
-    \item{Can measure quasi-GLW observables of $\pi^+\pi^-\pi^+\pi^-$ and $K^+K^-\pi^+\pi^-$ as additional constraints on $\gamma$:}
-  \end{itemize}
-  \begin{align*}
-    A_h =& \frac{\Gamma(B^-\to Dh^-) - \Gamma(B^+\to Dh^+)}{\Gamma(B^-\to Dh^-) + \Gamma(B^+\to Dh^+)}, \\
-    R_{\rm CP} =& \frac{R(4\pi)}{R(K3\pi)}, \\
-    R =& \frac{\Gamma(B\to DK)}{\Gamma(B\to D\pi)}.
-  \end{align*}
-  \begin{itemize}
-    \item{$B^\pm\to Dh^\pm$, $D\to K\pi\pi\pi$ yields provided by Tim Evans}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Global fit of $B^\pm\to Dh^\pm$, $D\to\pi^+\pi^-\pi^+\pi^-$}
-  \vspace{-0.3cm}
-  \begin{figure}
-    \centering
-    \includegraphics[width = 1.0\textwidth]{Plots/d2pipipipi_fiveL_allDP.pdf}
-  \end{figure}
-  \vspace{-0.2cm}
-  \begin{equation*}
-    \frac{{\rm Yield}(\pi\pi\pi\pi)}{{\rm Yield}(KK\pi\pi)} = \frac{\SI{161900(455)}{}}{\SI{54039(256)}{}} = \SI{2.996(17)}{}
-  \end{equation*}
-  \begin{center}
-    Compare with PDG: $\SI{3.06(16)}{}$
-  \end{center}
-\end{frame}
-
-\section{Conclusion}
-\begin{frame}{Conclusion}
-  \begin{center}
-    {\huge Conclusion}
-  \end{center}
-\end{frame}
-
 \begin{frame}{Conclusion}
   \begin{itemize}
     \setlength\itemsep{2em}
     \item{Binned $\gamma$ analysis of $B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$ is mostly complete, with promising results}
-    \item{Add quasi-GLW observables of $K^+K^-\pi^+\pi^-$ and $\pi^+\pi^-\pi^+\pi^-$ to further constrain $\gamma$}
+    \begin{itemize}
+      \item{Expect total uncertainty around $\SI{12}{\degree}$-$\SI{14}{\degree}$}
+    \end{itemize}
     \item{Will publish model-dependent measurement for now, update with model-independent results when $c_i$ and $s_i$ from BESIII are available}
+    \item{Analysis note: \href{https://twiki.cern.ch/twiki/pub/LHCbPhysics/GGSZB2DhD2hhpipiModelIndependent/LHCb-ANA-2021-051-v0.pdf}{LHCb-ANA-2021-051}}
   \end{itemize}
 \end{frame}
 
@@ -942,19 +919,6 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{$c_i$ and $s_i$ systematic uncertainty}
-  \begin{itemize}
-    \setlength\itemsep{1.5em}
-    \item{$c_i$ and $s_i$ uncertainty will come from BESIII analysis}
-    \begin{itemize}
-      \item{Mostly statistical in origin}
-    \end{itemize}
-    \item{Largest systematic uncertainty}
-    \item{Use estimated uncertainties corresponding to $\SI{20}{\per\femto\barn}$ at $\psi(3770)$}
-    \item{Smear $c_i$ and $s_i$ and do many fits to data}
-  \end{itemize}
-\end{frame}
-
 \begin{frame}{Remaining systematic uncertainties}
   Different strategies for evaluating systematic uncertainties:
   \vspace{0.2cm}
@@ -1060,36 +1024,36 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Summary of all systematic uncertainties}
+\begin{frame}{Bonus measurement}
+  \begin{itemize}
+    \setlength\itemsep{0.8em}
+    \item{The mode $B^\pm\to Dh^\pm$, $D\to\pi^+\pi^-\pi^+\pi^-$ very similar}
+    \item{Run this through \underline{same} selection (including BDT)}
+    \item{Quasi-GLW observables provide additional constraints on $\gamma$}
+    \item{Measure observables for both $\pi^+\pi^-\pi^+\pi^-$ and $K^+K^-\pi^+\pi^-$}
+  \end{itemize}
+  \begin{align*}
+    A_h =& \frac{\Gamma(B^-\to Dh^-) - \Gamma(B^+\to Dh^+)}{\Gamma(B^-\to Dh^-) + \Gamma(B^+\to Dh^+)}, \\
+    R_{\rm CP} =& \frac{R(4\pi)}{R(K3\pi)}, \\
+    R =& \frac{\Gamma(B\to DK)}{\Gamma(B\to D\pi)}.
+  \end{align*}
+  \begin{itemize}
+    \item{$B^\pm\to Dh^\pm$, $D\to K\pi\pi\pi$ yields provided by Tim Evans}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Global mass fit of $B^\pm\to Dh^\pm$, $D\to\pi^+\pi^-\pi^+\pi^-$}
   \vspace{-0.3cm}
-  \begin{center}
-    Uncertainties of CP observables in units of $10^{-2}$
-  \end{center}
-  \vspace{0.02cm}
-  \begin{tabular}{lcccccc} 
-        \hline
-        Source & $x_-^{DK}$ & $y_-^{DK}$ & $x_+^{DK}$ & $y_+^{DK}$ & $x_\xi^{D\pi}$ & $y_\xi^{D\pi}$ \\
-        \hline
-        Statistical                              & 2.44  & 2.87  & 2.16  & 2.87  & 3.47  & 4.30  \\
-        \hline
-        $c_i$, $s_i$                             & 0.66  & 1.55  & 0.32  & 1.31  & 1.73  & 1.03  \\
-        \hline
-        $B^\pm\to D\mu\nu$ background            & 0.04  & 0.03  & 0.02  & 0.15  & 0.30  & 0.10 \\
-        $D\to K(X)l\nu_l$ background             & 0.15  & 0.05  & 0.11  & 0.03  & 0.35  & 0.25 \\
-        $D\to K\pi\pi\pi$ background             & 0.17  & 0.03  & 0.04  & 0.01  & 0.46  & 0.18 \\
-        $\Lambda_b$ background                   & 0.09  & 0.11  & 0.00  & 0.18  & 0.16  & 0.21 \\
-        Bin dependent mass shape                 & 0.21  & 0.05  & 0.17  & 0.01  & 0.37  & 0.11 \\
-        Fit bias                                 & 0.19  & 0.03  & 0.16  & 0.04  & 0.30  & 0.16 \\
-        Fixed yield fractions                    & 0.02  & 0.03  & 0.02  & 0.02  & 0.01  & 0.01 \\
-        Low mass physics effects                 & 0.05  & 0.09  & 0.05  & 0.18  & 0.41  & 0.48 \\
-        Mass shape                               & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01 \\
-        PID Efficiency                           & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01 \\
-        \hline
-        Total LHCb systematic                    & 0.39  & 0.17  & 0.27  & 0.30  & 0.92  & 0.65  \\
-        \hline
-        Total systematic                         & 0.77  & 1.55  & 0.41  & 1.34  & 1.96  & 1.22  \\
-        \hline
-  \end{tabular}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 1.0\textwidth]{Plots/d2pipipipi_fiveL_allDP.pdf}
+    \captionsetup{justification=centering}
+    \caption{Fit of $B^\pm\to DK^\pm$ channel (left) and $B^\pm\to D\pi^\pm$ channel (right) using full Run 1 and 2 data}
+  \end{figure}
+  \vspace{-0.5cm}
+  \begin{itemize}
+    \item{Total yields are consistent with $KK\pi\pi$}
+  \end{itemize}
 \end{frame}
 
 \end{document}
